@@ -1,49 +1,120 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Green Business</title>
   <style>
+    /* Reset & basic */
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       background-color: #eaf7e1;
       color: #2d572c;
+      line-height: 1.6;
     }
+
     header {
-      background-color: #4CAF50;
+      background-color: #4caf50;
       color: white;
-      padding: 30px 20px;
+      padding: 40px 20px;
       text-align: center;
+      animation: fadeInDown 1s ease forwards;
     }
+
     nav {
       background-color: #388e3c;
-      padding: 10px;
+      padding: 15px 0;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
+
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 18px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
     }
+
+    nav a:hover {
+      color: #a5d6a7;
+    }
+
     section {
-      padding: 40px 20px;
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeInUp 1s ease forwards;
     }
+
+    section h2 {
+      color: #2e7d32;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #66bb6a;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
     footer {
       background-color: #2e7d32;
       color: white;
       text-align: center;
       padding: 20px;
+      margin-top: 50px;
     }
+
     .button {
       background-color: #66bb6a;
-      padding: 10px 20px;
+      padding: 12px 25px;
       color: white;
       text-decoration: none;
       border-radius: 5px;
       display: inline-block;
+      margin-top: 15px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #4caf50;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -55,51 +126,48 @@
   </header>
 
   <nav>
-    <a href="#tentang">Pengenalan</a>
+    <a href="#pengenalan">Pengenalan</a>
     <a href="#tentang">Tentang Kami</a>
     <a href="#produk">Produk</a>
-    <a href="#tentang">News</a>
-    <a href="#amalan">Acara</a>
+    <a href="#news">News</a>
+    <a href="#acara">Acara</a>
     <a href="#hubungi">Hubungi Kami</a>
   </nav>
 
-<section id="Pengenalan">
+  <section id="pengenalan">
     <h2>Pengenalan</h2>
-    <p>Description</p>
+    <p>Selamat datang ke laman Green Business, platform yang mempromosikan amalan perniagaan lestari dan mesra alam.</p>
   </section>
 
-  <section id="Tentang Kami">
+  <section id="tentang">
     <h2>Tentang Kami</h2>
-    <p>Description</p>
+    <p>Kami berdedikasi untuk membantu perniagaan menjalankan operasi hijau yang memberi impak positif kepada alam sekitar.</p>
   </section>
 
-  <section id="Produk">
+  <section id="produk">
     <h2>Produk Kami</h2>
     <ul>
-      <li>Produk 1</li>
-      <li>Produk 2</li>
-      <li>Product 3</li>
-      <li>Product 4</li>
+      <li>Produk 1: Beg guna semula</li>
+      <li>Produk 2: Sabun organik</li>
+      <li>Produk 3: Berus gigi buluh</li>
+      <li>Produk 4: Penapis air mesra alam</li>
     </ul>
     <a href="#hubungi" class="button">Tempah Sekarang</a>
   </section>
 
-  <section id="News">
+  <section id="news">
     <h2>News Hijau</h2>
-    <p>Description</p>
+    <p>Dapatkan kemaskini terkini mengenai inisiatif hijau dan berita alam sekitar dari kami.</p>
   </section>
 
- <section id="Acara">
+  <section id="acara">
     <h2>Acara</h2>
-    <p>Nama acara 1</p> 
-    </ul>
-    <a href="#hubungi" class="button">Sertai kami</a>
-    <p>Nama acara 2</p> 
-    </ul>
-    <a href="#hubungi" class="button">Sertai kami</a>
-    <p>Nama acara 3</p> 
-    </ul>
-    <a href="#hubungi" class="button">Sertai kami</a>
+    <p><strong>Nama Acara 1</strong></p>
+    <a href="#hubungi" class="button">Sertai Kami</a>
+    <p><strong>Nama Acara 2</strong></p>
+    <a href="#hubungi" class="button">Sertai Kami</a>
+    <p><strong>Nama Acara 3</strong></p>
+    <a href="#hubungi" class="button">Sertai Kami</a>
   </section>
 
   <section id="hubungi">
